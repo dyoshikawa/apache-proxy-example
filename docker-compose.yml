@@ -1,0 +1,10 @@
+version: "3"
+services:
+  apache:
+    image: httpd:alpine
+    ports:
+      - 8000:80
+    volumes:
+      - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
+  nginx:
+    image: nginx:alpine
